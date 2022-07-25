@@ -1,0 +1,221 @@
+body {
+    font-family: 'Bauhaus 93', Courier, monospace;
+    background-image: url("background.jpg");
+    background-color: #cccccc;
+    margin: 7% 30%;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+}
+
+.page-content {
+    display: flex;
+}
+
+.header>p {
+    background-color: rgb(252, 252, 234);
+    border: solid;
+    border-width: 4px;
+    vertical-align: middle;
+    padding: 10px 0px;
+    border-radius: 10px;
+}
+
+.house>div,
+.player>div {
+    display: block;
+    float: left;
+}
+
+.page-content>div,
+.house>div,
+.player>div {
+    color: black;
+    line-height: normal;
+    vertical-align: middle;
+    border-radius: 10px;
+    text-align: center;
+    margin: 10px;
+}
+
+.page-content>div {
+    border: solid;
+    border-color: black;
+    border-width: 3.5px;
+    margin: 10px;
+}
+
+.stay,
+.hit,
+.restart-button {
+    margin: auto;
+}
+
+button {
+    margin: auto;
+    padding: 5px 10px;
+    font-family: 'Bauhaus 93', Courier, monospace;
+    border-radius: 10px;
+    border-color: black;
+    background-color: rgb(248, 248, 209);
+}
+
+.hit>button {
+    padding: 5px 11.5px;
+}
+
+button:hover {
+    margin: auto;
+    padding: 5.5px 12px;
+    font-family: 'Bauhaus 93', Courier, monospace;
+    border-radius: 10px;
+    background-color: rgb(247, 247, 226);
+    border-color: pink;
+    color: pink;
+    transition: 0.1s;
+}
+
+.house {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-auto-rows: 1fr;
+    gap: 5px 5px;
+    grid-auto-flow: row;
+    grid-template-areas: "header header" "cards start" "cards restart-button" "cards bust-or-score";
+}
+
+.header {
+    grid-area: header;
+}
+
+.cards {
+    grid-area: cards;
+}
+
+.restart-button {
+    grid-area: restart-button;
+}
+
+.start {
+    grid-area: start;
+}
+
+.bust-or-score {
+    grid-area: bust-or-score;
+}
+
+.player {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-auto-rows: 1fr;
+    gap: 5px 5px;
+    grid-auto-flow: row;
+    grid-template-areas: "header header" "cards stay" "cards hit" "cards bust-score";
+}
+
+.cards {
+    grid-area: cards;
+}
+
+.header {
+    grid-area: header;
+}
+
+.stay {
+    grid-area: stay;
+}
+
+.hit {
+    grid-area: hit;
+}
+
+.bust-score {
+    grid-area: bust-score;
+}
+
+
+/*cards*/
+
+.cards {
+    border: dashed;
+    border-width: 3.5px;
+    border-radius: 5px;
+    height: 130px;
+    width: 80px;
+}
+
+img.h-card-one,
+img.p-card-one {
+    position: relative;
+    width: 65px;
+    height: 110px;
+    z-index: 1;
+    margin-top: 5px;
+    padding: 5px 5px;
+}
+
+
+/* h cards */
+
+img.h-card-two,
+img.h-card-three,
+img.h-card-four,
+img.h-card-five {
+    position: absolute;
+    margin-top: 40px;
+    margin-left: -70px;
+    width: 65px;
+    height: 110px;
+    z-index: 2;
+}
+
+img.h-card-three {
+    margin-top: 69px;
+    z-index: 3;
+}
+
+img.h-card-four {
+    margin-top: 98px;
+    z-index: 4;
+}
+
+img.h-card-five {
+    margin-top: 127px;
+    z-index: 5;
+}
+
+
+/* p cards */
+
+img.p-card-two,
+img.p-card-three,
+img.p-card-four,
+img.p-card-five {
+    position: absolute;
+    margin-top: 40px;
+    margin-left: -70px;
+    width: 65px;
+    height: 110px;
+    z-index: 2;
+}
+
+img.p-card-three {
+    margin-top: 69px;
+    z-index: 3;
+}
+
+img.p-card-four {
+    margin-top: 98px;
+    z-index: 4;
+}
+
+img.p-card-five {
+    margin-top: 127px;
+    z-index: 5;
+}
+
+img[src=""] {
+    display: none;
+}
